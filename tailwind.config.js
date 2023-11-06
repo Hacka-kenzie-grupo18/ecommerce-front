@@ -61,7 +61,9 @@ export default {
         btgMedF: "14px",
       },
       fontFamily: {
-        lexend: "Lexend",
+        kenia: ["Kenia", "sans"],
+        pixelify: ["Pixelify", "sans"],
+        roboto: ["Roboto", "sans"],
       },
       screens: {
         maxsm: { max: "768px" },
