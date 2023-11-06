@@ -1,14 +1,9 @@
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect } from "react";
 import FormRegister from "./formRegister/FormRegister";
 import { Link } from "react-router-dom";
 
 const Register = () => {
   const [backgroundImage, setBackgroundImage] = useState("");
-  const [selectedOption, setSelectedOption] = useState("true");
-
-  const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedOption(e.target.value);
-  };
 
   useEffect(() => {
     const images = [
@@ -54,47 +49,7 @@ const Register = () => {
             </h1>
             <span className="font-pixelify font-bold">Geeks Life</span>
           </div>
-          <div className="px-[30px] mt-4">
-            <p className="text-sm mb-[16px] font-roboto  font-bold">
-              Tipo de conta
-            </p>
-            <div className="flex gap-4 justify-center">
-              <label
-                className={`flex items-center rounded h-[48px] w-[100%] ${
-                  selectedOption === "false" ? "bg-blue-600 text-white" : " "
-                }`}
-              >
-                <input
-                  type="radio"
-                  className="hidden"
-                  name="userType"
-                  value="false"
-                  checked={selectedOption === "false"}
-                  onChange={handleOptionChange}
-                />
-                <div className="border-2 border-grey3 text-[16px]  h-[48px] w-[100%] font-bold rounded-md px-4 py-2 cursor-pointer flex justify-center items-center">
-                  Fornecedor
-                </div>
-              </label>
-              <label
-                className={`flex items-center rounded h-[48px] w-[100%] ${
-                  selectedOption === "true" ? "bg-blue-600 text-white" : " "
-                }`}
-              >
-                <input
-                  type="radio"
-                  className="hidden"
-                  name="userType"
-                  value="true"
-                  checked={selectedOption === "true"}
-                  onChange={handleOptionChange}
-                />
-                <div className="border-2 border-grey3 text-[16px]  h-[48px] w-[100%] font-bold rounded-md px-4 py-2 cursor-pointer flex justify-center items-center">
-                  Comprador
-                </div>
-              </label>
-            </div>
-          </div>
+
           <FormRegister />
           <div className="flex justify-center">
             <p className="text-[17px] mt-4 font-semibold ">

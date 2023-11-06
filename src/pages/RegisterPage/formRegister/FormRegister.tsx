@@ -82,10 +82,19 @@ const FormRegister = () => {
         // register={register("name")} error={errors);
       ></Input>
       <Input
+        id="cpf"
+        label="CPF"
+        placeholder="Digite seu cpf"
+        type="cpf"
+        maxLength={14}
+        // register={register("name")} error={errors);
+      ></Input>
+      <Input
         id="email"
         label="Email"
         placeholder="Digite seu email"
         type="text"
+
         // register={register("name")} error={errors);
       ></Input>
       <div className="flex gap-3">
@@ -93,7 +102,8 @@ const FormRegister = () => {
           id="phone"
           label="Telefone"
           placeholder="Digite seu telefone"
-          type="text"
+          type="tel"
+          maxLength={15}
           // register={register("name")} error={errors);
         ></Input>
         <Input
@@ -101,6 +111,7 @@ const FormRegister = () => {
           label="CEP"
           placeholder="Digite seu CEP"
           type="text"
+          maxLength={9}
           // register={register("name")} error={errors);
         ></Input>
       </div>
@@ -124,6 +135,7 @@ const FormRegister = () => {
           label="Número"
           placeholder="Automaticamente preenchido"
           type="number"
+
           // register={register("name")} error={errors);
         ></Input>
       </div>
