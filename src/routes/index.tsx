@@ -6,7 +6,7 @@ import Login from "../pages/Login/login";
 export const RoutesMain = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
+      <Route path="/" element={<HomePage />}/>
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
     </Routes>

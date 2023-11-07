@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        whiteFixed: "#FFFFFF",
+        whiteFixed: "#FFF;",
+        grey500: "#8B96A5",
+        primary:"#0D6EFD",
         brand1: "#4529E6",
         brand2: "#5126EA",
         brand3: "#B0A6F0",
