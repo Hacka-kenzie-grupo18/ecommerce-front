@@ -14,6 +14,7 @@ interface InputProps {
   defaultValue?: string;
   register?: object;
   error?: ReactNode;
+  onChange?: (value: string) => void;
 }
 
 export function Input({
@@ -22,28 +23,40 @@ export function Input({
   type,
   placeholder,
   maxLength,
+  defaultValue,
+  onChange,
 }: //   defaultValue,
 //   register,
 //   error,
 InputProps) {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(defaultValue || "");
 
   const isCPF = type === "cpf";
   const isPhone = type === "tel";
   const isCEP = id === "cep";
 
+  const handleFieldChange = (newValue: string) => {
+    if (onChange) {
+      onChange(newValue);
+    }
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (isCPF) {
       const newValue = insertMaskInCpf(event.target.value);
       setValue(newValue);
+      handleFieldChange(newValue);
     } else if (isPhone) {
       const newValue = inserMaskInPhone(event.target.value);
       setValue(newValue);
+      handleFieldChange(newValue);
     } else if (isCEP) {
       const newValue = insertMaskInCEP(event.target.value);
       setValue(newValue);
+      handleFieldChange(newValue);
     } else {
       setValue(event.target.value);
+      handleFieldChange(event.target.value);
     }
   };
 
