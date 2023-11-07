@@ -5,10 +5,10 @@ export default {
     extend: {
       colors: {
         whiteFixed: "#FFFFFF",
-        brand1: "#4529E6",
-        brand2: "#5126EA",
+        brand1: "#127FFF",
+        brand2: "#E3F0FF",
         brand3: "#B0A6F0",
-        brand4: "#EDEAFD",
+        brand4: "#1D334A",
         grey0: "#0B0D0D",
         grey1: "#212529",
         grey2: "#495057",
@@ -29,7 +29,7 @@ export default {
         random1: "#E34D8C",
         random2: "#C04277",
         random3: "#7D2A4D",
-        random4: "#7000FF",
+        random4: "#55BDC3",
         random5: "#6200E3",
         random6: "#36007D",
         random7: "#349974",

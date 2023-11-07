@@ -2,8 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .gradient-text {
   background-image: linear-gradient(to right, #2563eb, #ff9900);
   background-clip: text;
   color: transparent;
+}
+.gradient-text-top {
+  background-image: linear-gradient(to bottom, #c04277, #fff);
+  background-clip: text;
+  color: transparent;
+}
+
+.allign {
+  margin: 0 auto;
 }
