@@ -45,7 +45,7 @@ const Register = () => {
         <section className="w-[90%] max-w-[450px] h-fit pb-7 bg-white bg-opacity-70 rounded-xl">
           <div className="w-full h-20% flex items-center mt-4 flex-col">
             <h1 className="font-kenia text-[50px] m-0 h-[55px] gradient-text">
-              Hacka Kenzie
+            Cultura Geek
             </h1>
             <span className="font-pixelify font-bold">Geeks Life</span>
           </div>
@@ -54,7 +54,7 @@ const Register = () => {
           <div className="flex justify-center">
             <p className="text-[17px] mt-4 font-semibold ">
               Você já faz parte da nossa família?{" "}
-              <Link to={`/`} className="hover:underline text-blue-600">
+              <Link to={`/login`} className="hover:underline text-blue-600">
                 Clique aqui!
               </Link>
             </p>
