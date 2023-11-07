@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "./InputForm";
 import { apiCEP } from "../../../services/api";
 
@@ -7,7 +7,9 @@ const FormRegister = () => {
   const [address, setAddress] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
-  const [number, setNumber] = useState("");
+  const handleCEPChange = (newCep: string) => {
+    setCep(newCep);
+  };
 
   useEffect(() => {
     if (cep.length === 8) {
@@ -24,8 +26,6 @@ const FormRegister = () => {
         });
     }
   }, [cep]);
-
-  //
 
   return (
     <form className="flex flex-col gap-4 w-auto px-[30px] pt-[20px]">
@@ -62,13 +62,16 @@ const FormRegister = () => {
           label="CEP"
           placeholder="Digite seu CEP"
           type="text"
-          maxLength={9}
+          maxLength={8}
           value={cep}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setCep(e.target.value)
-          }
+          onChange={(value) => {
+            if (value.length === 8) {
+              handleCEPChange(value);
+            }
+          }}
         ></Input>
       </div>
+
       <Input
         id="address"
         label="Endereço"
@@ -82,11 +85,12 @@ const FormRegister = () => {
           label="Estado"
           placeholder="Automaticamente preenchido"
           type="text"
+          value={state}
         ></Input>
         <Input
           id="number"
           label="Número"
-          placeholder="Automaticamente preenchido"
+          placeholder="Digite o número"
           type="number"
         ></Input>
       </div>
@@ -95,7 +99,9 @@ const FormRegister = () => {
         label="Cidade"
         placeholder="Automaticamente preenchido"
         type="text"
+        value={city}
       ></Input>
+
       <Input
         id="password"
         label="Senha"

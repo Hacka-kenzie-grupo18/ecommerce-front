@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 import {
   inserMaskInPhone,
-  insertMaskInCEP,
+  // insertMaskInCEP,
   insertMaskInCpf,
 } from "../../../functions/Masks";
 
@@ -11,9 +11,11 @@ interface InputProps {
   placeholder: string;
   type: "text" | "password" | "email" | "tel" | "number" | "cpf";
   maxLength?: number;
-  defaultValue?: string;
+  value?: string;
   register?: object;
   error?: ReactNode;
+  readOnly?: boolean;
+  disabled?: boolean;
   onChange?: (value: string) => void;
 }
 
@@ -23,14 +25,14 @@ export function Input({
   type,
   placeholder,
   maxLength,
-  defaultValue,
+  value,
+
   onChange,
 }: //   defaultValue,
 //   register,
 //   error,
 InputProps) {
-  const [value, setValue] = useState(defaultValue || "");
-
+  const [onValue, setValue] = useState(value || "");
   const isCPF = type === "cpf";
   const isPhone = type === "tel";
   const isCEP = id === "cep";
@@ -41,6 +43,7 @@ InputProps) {
     }
   };
 
+  console.log(value);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (isCPF) {
       const newValue = insertMaskInCpf(event.target.value);
@@ -51,9 +54,8 @@ InputProps) {
       setValue(newValue);
       handleFieldChange(newValue);
     } else if (isCEP) {
-      const newValue = insertMaskInCEP(event.target.value);
-      setValue(newValue);
-      handleFieldChange(newValue);
+      setValue(event.target.value);
+      handleFieldChange(event.target.value);
     } else {
       setValue(event.target.value);
       handleFieldChange(event.target.value);
@@ -70,7 +72,7 @@ InputProps) {
         type={type}
         placeholder={placeholder}
         id={id}
-        value={value}
+        value={onValue}
         onChange={handleChange}
         maxLength={maxLength}
       />
