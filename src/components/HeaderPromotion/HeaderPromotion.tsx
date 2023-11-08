@@ -1,7 +1,7 @@
 import imgPromo from "../../assets/homeImages/foto1.jpg";
 const HeaderPromotion = () => {
   return (
-    <div className="h-[410px] w-full bg-white mt-[15px] p-4 flex">
+    <div className="h-[410px] w-full bg-white mt-[15px] p-4 flex border-grey6  rounded border-2">
       <div className="flex flex-col gap-4 justify-center px-2 w-[20%]">
         <button className="text-left font-roboto font-semibold text-grey2 hover:bg-brand2 rounded px-2 py-1">
           Animes
