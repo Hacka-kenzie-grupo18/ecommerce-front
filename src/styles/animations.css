@@ -29,3 +29,22 @@
 .slide-icon {
   animation: slideIcon 3s linear infinite alternate;
 }
+
+.animation-star-wars {
+  animation: shineStarWars 2s infinite;
+}
+
+@keyframes shineStarWars {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px orange;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+.card-star-wars {
+  position: relative;
+}
