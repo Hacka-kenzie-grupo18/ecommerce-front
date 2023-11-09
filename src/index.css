@@ -21,6 +21,16 @@
   background-clip: text;
   color: transparent;
 }
+.gradient-marvel {
+  background-image: linear-gradient(to right, red, white);
+  background-clip: text;
+  color: transparent;
+}
+.gradient-ring {
+  background-image: linear-gradient(to right, green, white);
+  background-clip: text;
+  color: transparent;
+}
 
 .allign {
   margin: 0 auto;
@@ -31,4 +41,8 @@
 }
 .card:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.background-bt-gradient {
+  background: linear-gradient(to right, #ff8c00, #ff4500);
 }

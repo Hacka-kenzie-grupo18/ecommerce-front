@@ -9,7 +9,7 @@
 
 .card img {
   transition: transform 0.1s;
-  border-radius: 10px;
+  border-bottom: 1px #127fff solid;
 }
 
 .card:hover img {
@@ -45,6 +45,32 @@
     text-shadow: none;
   }
 }
-.card-star-wars {
-  position: relative;
+.animation-marvel {
+  animation: shineMarvel 2s infinite;
+}
+.animation-ring {
+  animation: shineRing 2s infinite;
+}
+
+@keyframes shineMarvel {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px red;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes shineRing {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px lime;
+  }
+  100% {
+    text-shadow: none;
+  }
 }
