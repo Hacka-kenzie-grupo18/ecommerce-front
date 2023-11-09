@@ -96,3 +96,21 @@
 .highlight-text {
   animation: pulseAnimation 2s infinite alternate;
 }
+
+.background-animated {
+  background: linear-gradient(45deg, black, #00009c, black, #1d334a, black);
+  background-size: 300% 100%;
+  animation: background-colors 15s ease-in-out infinite;
+}
+
+@keyframes background-colors {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

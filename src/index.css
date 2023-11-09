@@ -53,3 +53,15 @@
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+.textarea-mail {
+  resize: none;
+  width: 90%;
+  height: 250px;
+
+  margin-top: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 5px;
+  background-color: #e9ecef;
+}

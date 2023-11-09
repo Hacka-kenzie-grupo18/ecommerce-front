@@ -22,7 +22,7 @@ const ThemesPromotionRings = () => {
   }, []);
 
   return (
-    <div className="max-w-[1400px] border-y-green-500 border-2 mx-auto px-4 flex bg-white justify-center items-center h-64 mt-2">
+    <div className="max-w-[1400px] border-y-green-500 border-2 mx-auto px-4 flex bg-white justify-center items-center h-64 mt-2 mb-8">
       <div
         className="h-full w-[70%] maxsm:w-full"
         style={{

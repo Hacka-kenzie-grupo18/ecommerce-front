@@ -5,6 +5,7 @@ import ThemesPromotionStarWars from "../../components/ThemesProducts/ThemesPromo
 import ThemesPromotionMarvel from "../../components/ThemesProducts/ThemePromotionMarvel";
 import ThemesPromotionRings from "../../components/ThemesProducts/ThemeRings";
 import CardsPromoInfo from "../../components/CardsPromoInfo/CardsPromo";
+import MailAreaHome from "../../components/MailAreaHome/MailAreaHome";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
           <ThemesPromotionStarWars />
           <ThemesPromotionMarvel />
           <ThemesPromotionRings />
+          <MailAreaHome />
         </div>
       </div>
     </div>
