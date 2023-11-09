@@ -4,6 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
+
+        grey200: "#EFF2F4",
+        grey300: "#DEE2E7",
+        grey400: "#BDC4CD",
+        grey500: "#8B96A5",
+        primary:"#0D6EFD",
+        brand1: "#4529E6",
+        brand2: "#5126EA",
         whiteFixed: "#FFFFFF",
         brand1: "#127FFF",
         brand2: "#E3F0FF",
@@ -68,6 +76,11 @@ export default {
       screens: {
         maxsm: { max: "768px" },
         midson: { min: "1215px" },
+        sm:"375px",
+        md: "640px",
+        lg: "768px",
+        xl: "1024px",
+        xxl: "1440px",
       },
     },
   },
