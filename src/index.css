@@ -16,7 +16,19 @@
   background-clip: text;
   color: transparent;
 }
+.gradient-star-wars {
+  background-image: linear-gradient(to right, #2563eb, aqua);
+  background-clip: text;
+  color: transparent;
+}
 
 .allign {
   margin: 0 auto;
+}
+
+.border-thin {
+  border: 1px solid #adb5bd;
+}
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
