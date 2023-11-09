@@ -9,7 +9,7 @@
 
 .card img {
   transition: transform 0.1s;
-  border-radius: 10px;
+  border-bottom: 1px #127fff solid;
 }
 
 .card:hover img {
@@ -45,6 +45,72 @@
     text-shadow: none;
   }
 }
-.card-star-wars {
-  position: relative;
+.animation-marvel {
+  animation: shineMarvel 2s infinite;
+}
+.animation-ring {
+  animation: shineRing 2s infinite;
+}
+
+@keyframes shineMarvel {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px red;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes shineRing {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 10px lime;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    background-image: linear-gradient(to top, #55bdc3, #fdd8d8);
+    background-clip: text;
+    color: transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ff4500;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(to top, #127fff, black);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.highlight-text {
+  animation: pulseAnimation 2s infinite alternate;
+}
+
+.background-animated {
+  background: linear-gradient(45deg, black, #00009c, black, #1d334a, black);
+  background-size: 300% 100%;
+  animation: background-colors 15s ease-in-out infinite;
+}
+
+@keyframes background-colors {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
