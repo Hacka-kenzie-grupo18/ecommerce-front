@@ -74,3 +74,25 @@
     text-shadow: none;
   }
 }
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    background-image: linear-gradient(to top, #55bdc3, #fdd8d8);
+    background-clip: text;
+    color: transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ff4500;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(to top, #127fff, black);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.highlight-text {
+  animation: pulseAnimation 2s infinite alternate;
+}

@@ -4,7 +4,7 @@ import { HiArrowSmRight, HiArrowSmLeft } from "react-icons/hi";
 
 const PromotionTime = () => {
   return (
-    <div className="max-w-screen[1400px] border-y-zinc-500 mx-auto px-4 mt-4 flex flex-col bg-white justify-center items-center mb-4">
+    <div className="max-w-screen[1400px] border-y-zinc-500 mx-auto px-4 mt-4 flex flex-col bg-white justify-center items-center mb-10">
       <div className="flex h-full justify-center items-center">
         <span className="maxsm:hidden mr-8 slide-icon text-[35px]">
           <HiArrowSmRight />

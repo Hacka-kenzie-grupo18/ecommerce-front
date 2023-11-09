@@ -4,6 +4,7 @@ import Header from "../../components/Header/index";
 import ThemesPromotionStarWars from "../../components/ThemesProducts/ThemesPromotionStarWars";
 import ThemesPromotionMarvel from "../../components/ThemesProducts/ThemePromotionMarvel";
 import ThemesPromotionRings from "../../components/ThemesProducts/ThemeRings";
+import CardsPromoInfo from "../../components/CardsPromoInfo/CardsPromo";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         </section>
         <div className="h-fit mt-4">
           <PromotionTime />
+          <CardsPromoInfo />
           <ThemesPromotionStarWars />
           <ThemesPromotionMarvel />
           <ThemesPromotionRings />
