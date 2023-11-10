@@ -6,8 +6,8 @@ import { GrUnorderedList } from 'react-icons/gr'
 import { PiUserCircleThin } from 'react-icons/pi'
 import { TfiWorld } from 'react-icons/tfi'
 import { VscHome } from 'react-icons/vsc'
-// import DropDownLoggedIn from './dropdownLoggedIn'
 import DropDownLoggedOut from './dropdownLoggedOut'
+// import DropDownLoggedIn from './dropdownLoggedIn'
 
 interface DropDownProps {
   closeDropdown: () => void
@@ -62,21 +62,6 @@ const DropDown = ({ closeDropdown }: DropDownProps) => {
             <span>English | USD</span>
           </div>
           <div className='flex items-center mt-4'>
-            <GrUnorderedList className='mr-4' />
-            <span>Entre em contato</span>
-          </div>
-          <div className='flex items-center mt-4'>
-            <BsFillHeartFill className='mr-4' />
-            <span>Sobre</span>
-          </div>
-          <div className='mt-6 bg-grey300 w-[250px] h-[2px]'></div>
-        </div>
-        <div className='text-grey2 p-4 text-[18px]'>
-          <div className='flex items-center'>
-            <TfiWorld className='mr-4' />
-            <span>English | USD</span>
-          </div>
-          <div className='flex items-center mt-4'>
             <BsHeadset className='mr-4' />
             <span>Entre em contato</span>
           </div>
@@ -84,6 +69,19 @@ const DropDown = ({ closeDropdown }: DropDownProps) => {
             <BiSolidCity className='mr-4' />
             <span>Sobre</span>
           </div>
+          <div className='mt-6 bg-grey300 w-[250px] h-[2px]'></div>
+        </div>
+        <div className='text-grey2 p-4 text-[18px]'>
+          <div className='flex items-center ml-8'>
+            <span>User agreement</span>
+          </div>
+          <div className='flex items-center mt-4 ml-8'>
+            <span>Partnership</span>
+          </div>
+          <div className='flex items-center mt-4 ml-8'>
+            <span>Privacy policy</span>
+          </div>
+          <div className='mt-6 bg-grey300 w-[250px] h-[2px]'></div>
         </div>
       </div>
     </div>
