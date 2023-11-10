@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { productMarvel } from "../../mock/products";
-
+import { productStarWars } from "../../mock/products";
 interface Product {
   id: number;
   name: string;
   imageUrl: string;
 }
 
-const ThemesPromotionMarvel = () => {
+const ThemesPromotionRings = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -23,19 +22,19 @@ const ThemesPromotionMarvel = () => {
   }, []);
 
   return (
-    <div className="max-w-[1400px] border-y-red-600 border-2 mt-1 mx-auto px-4 flex bg-white justify-center items-center h-64">
+    <div className="max-w-[1400px] border-y-green-500 border-2 mx-auto px-4 flex bg-white justify-center items-center h-64 mt-2 mb-8">
       <div
         className="h-full w-[70%] maxsm:w-full"
         style={{
           backgroundImage:
-            "url(https://miro.medium.com/v2/resize:fit:1358/0*qdHImq1G588SB9Ii.jpg)",
+            "url(https://files.tecnoblog.net/wp-content/uploads/2022/01/senhor-dos-aneis-ordem-e1612211670420.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full h-full flex justify-center flex-col items-center gap-[100px]">
-          <h3 className="text-white animation-marvel font-extrabold text-[50px] font-kenia flex flex-col justify-center items-center gradient-marvel">
-            Marvel Comics
+        <div className="w-full h-full flex justify-center flex-col items-center gap-20">
+          <h3 className="text-white animation-ring font-extrabold text-[50px] font-kenia flex flex-col justify-center items-center gradient-ring">
+            Lord of Rings
           </h3>
           <button className="w-40 h-14 background-bt-gradient text-white border-thin rounded-xl font-bold text-[20px] ">
             Veja mais
@@ -43,10 +42,10 @@ const ThemesPromotionMarvel = () => {
         </div>
       </div>
       <div className="flex flex-wrap h-full">
-        {productMarvel.map((product: Product, index: number) => (
+        {productStarWars.map((product: Product, index: number) => (
           <div
             key={product.id}
-            className={`w-52 h-[50%] bg-white border-thin flex justify-center flex-col items-center`}
+            className={`w-52 h-[50%] bg-white border-thin  cursor-pointer  flex justify-center flex-col items-center`}
             style={{
               display:
                 (index >= 6 && windowWidth < 1400) ||
@@ -56,7 +55,7 @@ const ThemesPromotionMarvel = () => {
                   : "flex",
             }}
           >
-            <img src={product.imageUrl} alt="" className="w-[25%] h-[50%]" />
+            <img src={product.imageUrl} alt="" className="w-[33%] h-[50%]" />
             <h5 className="mt-2 font-semibold ">{product.name}</h5>
           </div>
         ))}
@@ -65,4 +64,4 @@ const ThemesPromotionMarvel = () => {
   );
 };
 
-export default ThemesPromotionMarvel;
+export default ThemesPromotionRings;
