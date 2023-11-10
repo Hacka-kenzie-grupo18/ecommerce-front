@@ -65,3 +65,9 @@
   padding-top: 5px;
   background-color: #e9ecef;
 }
+.slide-allign {
+  width: 100%;
+  max-width: 800px;
+  height: 384px;
+  object-fit: cover;
+}
