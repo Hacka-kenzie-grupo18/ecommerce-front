@@ -52,7 +52,7 @@ const HeaderPromotion = () => {
         </div>
       </div>
       <div className="w-[23%] ml-2  gap-2 flex flex-col">
-        <div className="h-[40%] w-full bg-brand2 rounded-xl pt-2 flex-col flex gap-2">
+        <div className="h-[40%] w-full bg-white rounded-xl pt-2 flex-col flex gap-2">
           <div className="flex h-1/3 items-center justify-center gap-3 pl-3">
             <img
               src="../../../src/assets/foto1.jpg"
@@ -65,7 +65,7 @@ const HeaderPromotion = () => {
             </h5>
           </div>
           <div className="flex justify-center flex-col px-3 ">
-            <button className="h-9 w-full bg-brand1 rounded-2xl text-white font-semibold mb-1">
+            <button className="h-9 w-full bg-primary rounded-2xl text-white font-semibold mb-1">
               Join now
             </button>
             <button className="h-9 w-full bg-white rounded-2xl border-[2px] text-brand1 font-semibold mb-1">
@@ -76,7 +76,7 @@ const HeaderPromotion = () => {
         <button className="h-[29%] w-full bg-orange-500 rounded-xl flex justify-center items-center text-[18px] px-6  text-white ">
           <h5>Get US $10 off with a new supplier</h5>
         </button>
-        <button className="h-[29%] w-full bg-random4 rounded-xl flex justify-center items-center text-[18px] px-6 text-white">
+        <button className="h-[29%] w-full bg-random3 rounded-xl flex justify-center items-center text-[18px] px-6 text-white">
           <h5>Send quotes with supplier preferences</h5>
         </button>
       </div>

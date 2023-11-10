@@ -7,6 +7,7 @@ import ThemesPromotionRings from "../../components/ThemesProducts/ThemeRings";
 import CardsPromoInfo from "../../components/CardsPromoInfo/CardsPromo";
 import MailAreaHome from "../../components/MailAreaHome/MailAreaHome";
 import SwiperHome from "../../components/Swiper/SwiperHome";
+import AnimatedBanner from "../../components/MovPromotion/AnimatedBanner";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         <div className="h-fit mt-4">
           <PromotionTime />
           <CardsPromoInfo />
+          <AnimatedBanner />
           <ThemesPromotionStarWars />
           <ThemesPromotionMarvel />
           <ThemesPromotionRings />
