@@ -98,7 +98,7 @@
 }
 
 .background-animated {
-  background: linear-gradient(45deg, black, #00009c, black, #1d334a, black);
+  background: linear-gradient(45deg, black, #1d334a, black, #1d334a, black);
   background-size: 300% 100%;
   animation: background-colors 15s ease-in-out infinite;
 }
