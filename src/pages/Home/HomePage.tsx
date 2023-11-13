@@ -1,12 +1,12 @@
+import CardsPromoInfo from "../../components/CardsPromoInfo/CardsPromo";
+import Header from "../../components/Header";
 import HeaderPromotion from "../../components/HeaderPromotion/HeaderPromotion";
+import MailAreaHome from "../../components/MailAreaHome/MailAreaHome";
 import PromotionTime from "../../components/PromotionTime/PromotionTime";
-import Header from "../../components/Header/index";
-import ThemesPromotionStarWars from "../../components/ThemesProducts/ThemesPromotionStarWars";
+import SwiperHome from "../../components/Swiper/SwiperHome";
 import ThemesPromotionMarvel from "../../components/ThemesProducts/ThemePromotionMarvel";
 import ThemesPromotionRings from "../../components/ThemesProducts/ThemeRings";
-import CardsPromoInfo from "../../components/CardsPromoInfo/CardsPromo";
-import MailAreaHome from "../../components/MailAreaHome/MailAreaHome";
-import SwiperHome from "../../components/Swiper/SwiperHome";
+import ThemesPromotionStarWars from "../../components/ThemesProducts/ThemesPromotionStarWars";
 import AnimatedBanner from "../../components/MovPromotion/AnimatedBanner";
 
 const HomePage = () => {
