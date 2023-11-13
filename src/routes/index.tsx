@@ -3,6 +3,7 @@ import HomePage from "../pages/Home/HomePage";
 import Register from "../pages/RegisterPage/register";
 import Login from "../pages/Login/login";
 import SearchProdutcts from "../pages/SearchProducts/SearchProdutcts";
+import DashboardAdmin from "../pages/Dashboard/DashboardAdmin";
 
 export const RoutesMain = () => {
   return (
@@ -11,6 +12,7 @@ export const RoutesMain = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/products" element={<SearchProdutcts />} />
+      <Route path="/dashboard" element={<DashboardAdmin />} />
     </Routes>
   );
 };
