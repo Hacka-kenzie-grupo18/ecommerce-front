@@ -23,7 +23,7 @@ const ThemesPromotionStarWars = () => {
   }, []);
 
   return (
-    <div className="max-w-[1400px] border-y-sky-600 border-2 mx-auto px-4 flex bg-white justify-center items-center h-64 mt-10">
+    <div className="max-w-[1400px] border-y-sky-600 border-2 mx-auto px-4 flex bg-white justify-center items-center h-64 mt-2">
       <div
         className="h-full w-[70%] maxsm:w-full"
         style={{

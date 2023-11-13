@@ -3,7 +3,7 @@ import { FiMail } from "react-icons/fi";
 import { HiOutlineMailOpen } from "react-icons/hi";
 const MailAreaHome = () => {
   return (
-    <div className=" allign w-full background-animated flex first-letter:first-line: h-[420px] maxsm:flex maxsm:justify-center maxsm:items-center bg-black">
+    <div className=" allign w-full border-t-white border-2 background-animated flex first-letter:first-line: h-[420px] maxsm:flex maxsm:justify-center maxsm:items-center bg-black">
       <div className=" w-[45%] flex flex-col maxsm:hidden justify-center items-center gap-12">
         <h3 className="text-[55px]  font-kenia flex items-center gap-4 font-bold text-white">
           <span className="text-[30px]">

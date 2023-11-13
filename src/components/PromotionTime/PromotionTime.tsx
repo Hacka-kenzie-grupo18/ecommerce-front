@@ -9,7 +9,7 @@ const PromotionTime = () => {
         <span className="maxsm:hidden mr-8 slide-icon text-[35px]">
           <HiArrowSmRight />
         </span>
-        <h4 className="text-[55px] maxsm:text-[40px] maxsm:mt-3 font-bold h-16 font-kenia text-brand1">
+        <h4 className="text-[55px] maxsm:text-[40px] maxsm:mt-3 font-bold h-16 font-kenia text-primary">
           Ofertas Exclusivas
         </h4>
         <span className="maxsm:hidden slide-icon ml-4 maxsm:flex-none text-[35px]">
