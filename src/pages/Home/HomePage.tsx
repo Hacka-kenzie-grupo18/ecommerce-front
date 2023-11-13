@@ -1,12 +1,12 @@
-import CardsPromoInfo from '../../Components/CardsPromoInfo/CardsPromo'
-import Header from '../../Components/Header'
-import HeaderPromotion from '../../Components/HeaderPromotion/HeaderPromotion'
-import MailAreaHome from '../../Components/MailAreaHome/MailAreaHome'
-import PromotionTime from '../../Components/PromotionTime/PromotionTime'
-import SwiperHome from '../../Components/Swiper/SwiperHome'
-import ThemesPromotionMarvel from '../../Components/ThemesProducts/ThemePromotionMarvel'
-import ThemesPromotionRings from '../../Components/ThemesProducts/ThemeRings'
-import ThemesPromotionStarWars from '../../Components/ThemesProducts/ThemesPromotionStarWars'
+import CardsPromoInfo from '../../components/CardsPromoInfo/CardsPromo'
+import Header from '../../components/Header'
+import HeaderPromotion from '../../components/HeaderPromotion/HeaderPromotion'
+import MailAreaHome from '../../components/MailAreaHome/MailAreaHome'
+import PromotionTime from '../../components/PromotionTime/PromotionTime'
+import SwiperHome from '../../components/Swiper/SwiperHome'
+import ThemesPromotionMarvel from '../../components/ThemesProducts/ThemePromotionMarvel'
+import ThemesPromotionRings from '../../components/ThemesProducts/ThemeRings'
+import ThemesPromotionStarWars from '../../components/ThemesProducts/ThemesPromotionStarWars'
 
 const HomePage = () => {
   return (
