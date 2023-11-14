@@ -1,6 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Input } from "../RegisterPage/formRegister/InputForm";
+import { useForm } from "react-hook-form";
+import { LoginType } from "./interfaces/types";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { loginSchema } from "../../schemas/login/schemas";
+import { AuthContext } from "../../context/AuthContext";
+
 
 const Login = () => {
 
@@ -27,6 +32,17 @@ const Login = () => {
     const randomIndex = Math.floor(Math.random() * images.length);
     setBackgroundImage(images[randomIndex]);
   }, []);
+
+
+  const {register, handleSubmit, formState: {errors}} = useForm<LoginType>({resolver: zodResolver(loginSchema)})
+
+
+  const {login} = useContext(AuthContext)
+
+  const handleSubmitData = (data: LoginType) => {
+    console.log(data)
+    login(data)
+  }
   
     return(
         <main className="w-[100%] h-[100vh]">
@@ -50,16 +66,40 @@ const Login = () => {
                         <p className="mt-6 text-sm font-roboto font-bold">LOGIN</p>
                     </div>
 
-                    <form className="m-8">
-                        <Input
-                            id="email"
-                        label="Email"
-                            placeholder="Digite seu email"
-                            type="email"></Input>
-                        <Input
-                            id="password"
-                            label="Senha"
-                            placeholder="Digite sua password" type="password"></Input>
+                    <form onSubmit={handleSubmit(handleSubmitData)} className="m-8">
+                    
+                    <fieldset className="relative flex flex-col gap-2 border-none">
+                    <label className="font-500 text-[14px] text-[#2563eb]">Email</label>
+                    <input
+                      {...register("email")}
+                      placeholder="Digite seu Email"
+                      className="h-12 w-full outline-none bg-whiteFixed text-grey1 rounded-4 border-2 border-grey4 hover:bg-grey9 focus-border-[#2563eb] px-4 font-semibold"
+                    />
+                    <span className={`error-message text-[15px] ${errors.email?.message ? "block" : "hidden"}`}>
+                      {errors.email?.message} 
+                    </span>
+
+                   
+
+                   
+                    <label className="font-500 text-[14px] text-[#2563eb]">Senha</label>
+                    <input
+                      {...register("password")}
+                      type="password"
+                      placeholder="Digite sua senha"
+                      className="h-12 w-full outline-none bg-whiteFixed text-grey1 rounded-4 border-2 border-grey4 hover:bg-grey9 focus-border-[#2563eb] px-4 font-semibold"
+                    />
+                      <span className={`error-message text-[15px] ${errors.password?.message ? "block" : "hidden"}`}>
+                      {errors.password?.message} 
+                      </span>
+                        <button
+                          type="submit"
+                          className="w-full h-14 bg-blue-600 text-[white] rounded-xl text-[18px] font-bold font-roboto"
+                          >
+                          ENTRAR
+                        </button>
+                          
+                      </fieldset>
                     </form>
 
                     <div className="flex justify-center m-4">
