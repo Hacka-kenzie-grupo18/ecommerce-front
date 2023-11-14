@@ -15,6 +15,7 @@ export default {
         brand2: '#5126EA',
         brand3: '#B0A6F0',
         brand4: '#EDEAFD',
+        brand5: '#FFF0DF',
         grey0: '#0B0D0D',
         grey1: '#212529',
         grey2: '#495057',
@@ -63,6 +64,7 @@ export default {
         btgMedH: '38px',
       },
       fontSize: {
+        btgXBigF: '18px',
         btgBigF: '16px',
         btgMedF: '14px',
       },
