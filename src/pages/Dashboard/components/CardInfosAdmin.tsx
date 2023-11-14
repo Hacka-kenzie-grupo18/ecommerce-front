@@ -37,6 +37,12 @@ const CardInfosAdmin = () => {
     },
     {
       stock: 50,
+      name: "Camiseta preta Marvel",
+      createdAt: "25 de janeiro",
+      DisponibleSize: "P, PP, M, G",
+    },
+    {
+      stock: 50,
       name: "Camiseta verde Dumbledore",
       createdAt: "25 de janeiro",
       DisponibleSize: "P, PP, M, G",
