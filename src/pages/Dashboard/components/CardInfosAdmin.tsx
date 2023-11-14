@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import foto1 from "../../../assets/foto1.jpg";
 import { BiEdit } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
+import ModalDelete from "./ModalDelete";
 
 const CardInfosAdmin = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isName, setIsName] = useState("");
+  const toggleModal = () => setIsOpenModal(!isOpenModal);
   const data = [
     {
       stock: 30,
@@ -58,8 +62,11 @@ const CardInfosAdmin = () => {
   return (
     <>
       {" "}
-      {data.map((data) => (
-        <div className="bg-white w-64 h-96 border-2 rounded border-black">
+      {data.map((data, index) => (
+        <div
+          key={index}
+          className="bg-white w-64 h-96 border-2 rounded border-black"
+        >
           <img src={foto1} alt="" className="w-full h-[50%]" />
           <div className="p-4">
             <h6 className="text-[12px] mb-2">{data.name}</h6>
@@ -83,7 +90,13 @@ const CardInfosAdmin = () => {
                     <BiEdit />
                   </span>
                 </button>
-                <button className="w-fit h-fit p-1  border-[1px] border-black rounded-xl">
+                <button
+                  className="w-fit h-fit p-1  border-[1px] border-black rounded-xl"
+                  onClick={() => {
+                    toggleModal();
+                    setIsName(data.name);
+                  }}
+                >
                   <span className="text-[20px]">
                     <MdOutlineDelete />
                   </span>
@@ -93,6 +106,7 @@ const CardInfosAdmin = () => {
           </div>
         </div>
       ))}
+      {isOpenModal && <ModalDelete toggleModal={toggleModal} name={isName} />}
     </>
   );
 };
