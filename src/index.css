@@ -92,3 +92,60 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
+
+.create {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.create::before {
+  content: "Notificação";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Righteous", cursive;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.create:hover::before {
+  opacity: 1;
+}
+
+.logout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: transparent;
+}
+.logout::before {
+  content: "Sair";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Righteous", cursive;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.logout:hover::before {
+  opacity: 1;
+}
