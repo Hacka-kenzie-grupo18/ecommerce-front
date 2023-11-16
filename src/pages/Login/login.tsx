@@ -1,34 +1,34 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Input } from '../RegisterPage/formRegister/InputForm'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Input } from "../RegisterPage/formRegister/InputForm";
 
 const Login = () => {
   const [backgroundImage, setBackgroundImage] = useState('')
 
   useEffect(() => {
     const images = [
-      '../../../src/assets/foto1.jpg',
-      '../../../src/assets/foto2.jpg',
-      '../../../src/assets/foto3.jpg',
-      '../../../src/assets/foto4.jpg',
-      '../../../src/assets/foto5.jpg',
-      '../../../src/assets/foto6.jpg',
-      '../../../src/assets/foto7.jpg',
-      '../../../src/assets/foto8.jpg',
-      '../../../src/assets/foto9.jpg',
-      '../../../src/assets/foto10.jpg',
-      '../../../src/assets/foto11.jpg',
-      '../../../src/assets/foto12.jpg',
-      '../../../src/assets/foto13.jpg',
-      '../../../src/assets/foto14.jpg',
-      '../../../src/assets/foto15.jpg',
-    ]
-    const randomIndex = Math.floor(Math.random() * images.length)
-    setBackgroundImage(images[randomIndex])
-  }, [])
-
-  return (
-    <main className='w-[100%] h-[100vh]'>
+      "../../../src/assets/foto1.jpg",
+      "../../../src/assets/foto2.jpg",
+      "../../../src/assets/foto3.jpg",
+      "../../../src/assets/foto4.jpg",
+      "../../../src/assets/foto5.jpg",
+      "../../../src/assets/foto6.jpg",
+      "../../../src/assets/foto7.jpg",
+      "../../../src/assets/foto8.jpg",
+      "../../../src/assets/foto9.jpg",
+      "../../../src/assets/foto10.jpg",
+      "../../../src/assets/foto11.jpg",
+      "../../../src/assets/foto12.jpg",
+      "../../../src/assets/foto13.jpg",
+      "../../../src/assets/foto14.jpg",
+      "../../../src/assets/foto15.jpg",
+    ];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    setBackgroundImage(images[randomIndex]);
+  }, []);
+  
+    return(
+        <main className="w-[100%] h-[100vh]">
       <div
         className='flex justify-center items-center'
         style={{
@@ -51,20 +51,17 @@ const Login = () => {
             <p className='mt-6 text-sm font-roboto font-bold'>LOGIN</p>
           </div>
 
-          <form className='m-8'>
-            <Input
-              id='email'
-              label='Email'
-              placeholder='Digite seu email'
-              type='email'
-            ></Input>
-            <Input
-              id='password'
-              label='Senha'
-              placeholder='Digite sua password'
-              type='password'
-            ></Input>
-          </form>
+                    <form className="m-8">
+                        <Input
+                            id="email"
+                        label="Email"
+                            placeholder="Digite seu email"
+                            type="email"></Input>
+                        <Input
+                            id="password"
+                            label="Senha"
+                            placeholder="Digite sua password" type="password"></Input>
+                    </form>
 
           <div className='flex justify-center m-4'>
             <p className='text-[17px] mt-4 font-semibold '>

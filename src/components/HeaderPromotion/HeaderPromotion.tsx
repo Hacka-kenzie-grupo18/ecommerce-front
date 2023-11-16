@@ -1,4 +1,5 @@
 import imgPromo from "../../assets/homeImages/foto1.jpg";
+
 const HeaderPromotion = () => {
   return (
     <div className="h-[410px] w-full bg-white mt-[15px] p-4 flex border-grey6  rounded border-2">

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -15,7 +15,6 @@ export default {
         brand2: '#5126EA',
         brand3: '#B0A6F0',
         brand4: '#EDEAFD',
-        brand5: '#FFF0DF',
         grey0: '#0B0D0D',
         grey1: '#212529',
         grey2: '#495057',
@@ -47,31 +46,30 @@ export default {
         random12: '#30007D',
       },
       fontWeight: {
-        700: '700',
-        600: '600',
-        500: '500',
-        400: '400',
+        700: "700",
+        600: "600",
+        500: "500",
+        400: "400",
       },
       borderRadius: {
-        4: '4px',
+        4: "4px",
       },
       padding: {
-        btnBigPad: '28px',
-        btnMedPad: '20px',
+        btnBigPad: "28px",
+        btnMedPad: "20px",
       },
       height: {
-        btgBigH: '48px',
-        btgMedH: '38px',
+        btgBigH: "48px",
+        btgMedH: "38px",
       },
       fontSize: {
-        btgXBigF: '18px',
         btgBigF: '16px',
         btgMedF: '14px',
       },
       fontFamily: {
-        kenia: ['Kenia', 'sans'],
-        pixelify: ['Pixelify', 'sans'],
-        roboto: ['Roboto', 'sans'],
+        kenia: ["Kenia", "sans"],
+        pixelify: ["Pixelify", "sans"],
+        roboto: ["Roboto", "sans"],
       },
       screens: {
         maxsm: { max: "768px" },
@@ -85,4 +83,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
