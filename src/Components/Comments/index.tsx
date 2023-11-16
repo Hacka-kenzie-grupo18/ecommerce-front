@@ -5,8 +5,8 @@ import { MdOutlineMessage } from 'react-icons/md'
 const Comments = () => {
   return (
     <div className='rounded-4 mt-4 p-2 overflow-y-scroll h-[400px] w-[370px] lg:w-[780px] border-2'>
-      <h6 className='pl-3 pt-3'>Camiseta Star Wars P</h6>
-      <div className='flex p-2'>
+      <h6 className=' pt-3'>Camiseta Star Wars P</h6>
+      <div className='flex'>
         <div className='w[70px] h-[30px] flex items-center justify-center'>
           <LiaStarSolid className='text-yellow-500' />
           <LiaStarSolid className='text-yellow-500' />

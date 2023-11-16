@@ -4,8 +4,8 @@ import Description from '../Description'
 const DescriptionAndComment = () => {
   return (
     <>
-      <section className='p-2 flex flex-col items-center pb-20'>
-        <div className='border-2 rounded-4 bg-whiteFixed p-4'>
+      <section className='flex flex-col items-center pb-5'>
+        <div className='border-2 rounded-4 bg-whiteFixed p-2'>
           <Description />
           <Comments />
         </div>
