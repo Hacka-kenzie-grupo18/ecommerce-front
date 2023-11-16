@@ -44,7 +44,7 @@ const AsideFilter: React.FC = () => {
   };
 
   return (
-    <div className="w-[20%] h-full allign  bg-white px-3 py-10">
+    <div className=" w-[300px] h-full allign  bg-white px-3 py-10">
       <div
         className="text-[18px] font-bold cursor-pointer flex justify-between"
         onClick={() => toggleOptions("category")}
