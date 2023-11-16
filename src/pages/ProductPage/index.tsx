@@ -1,7 +1,7 @@
-import DescriptionAndComment from '../../Components/DescriptionAndComment/indext'
-import Footer from '../../Components/Footer'
-import Product from '../../Components/Product'
-import RelatedProducts from '../../Components/RelatedProducts'
+import DescriptionAndComment from '../../components/Swiper/DescriptionAndComment/indext'
+import Footer from '../../components/Swiper/Footer'
+import Product from '../../components/Select/Product'
+import RelatedProducts from '../../components/Select/RelatedProducts'
 
 const ProductPage = () => (
   <div className='bg-grey200 h-[100%] flex flex-col items-center'>
