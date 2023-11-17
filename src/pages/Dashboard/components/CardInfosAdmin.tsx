@@ -3,8 +3,11 @@ import foto1 from "../../../assets/foto1.jpg";
 import { BiEdit } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
 import ModalDelete from "./ModalDelete";
+interface CardInfosAdminProps {
+  search: string;
+}
 
-const CardInfosAdmin = () => {
+const CardInfosAdmin = ({ search }: CardInfosAdminProps) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isName, setIsName] = useState("");
   const toggleModal = () => setIsOpenModal(!isOpenModal);
@@ -59,10 +62,14 @@ const CardInfosAdmin = () => {
     },
   ];
 
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <>
       {" "}
-      {data.map((data, index) => (
+      {filteredData.map((data, index) => (
         <div
           key={index}
           className="bg-white w-64 h-96 border-2 rounded border-black"
