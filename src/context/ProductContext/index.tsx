@@ -1,15 +1,26 @@
-import { createContext } from "react";
-import { productProviderData, productProviderProps } from "./types";
+import { Dispatch, createContext, useState } from "react";
+import { productProviderProps } from "./types";
 
-export const ProductContext = createContext<productProviderData>({} as productProviderData)
+export const ProductContext = createContext<ProductProvideValues>(
+  {} as ProductProvideValues
+);
 
-export const ProductProvider = ({children}: productProviderProps) => {
- 
-    
-    return (
-        <ProductContext.Provider value={{}}>
-            {children}
-        </ProductContext.Provider>
-    )
-
+interface ProductProvideValues {
+  setButtonClicked: Dispatch<React.SetStateAction<string[]>>;
+  buttonClicked: string[];
 }
+
+export const ProductProvider = ({ children }: productProviderProps) => {
+  const [buttonClicked, setButtonClicked] = useState<string[]>([]);
+
+  return (
+    <ProductContext.Provider
+      value={{
+        setButtonClicked,
+        buttonClicked,
+      }}
+    >
+      {children}
+    </ProductContext.Provider>
+  );
+};

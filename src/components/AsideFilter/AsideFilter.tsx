@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { useProduct } from "../../hooks/useProduct";
+
 type Sections = {
   category: boolean;
   colors: boolean;
@@ -9,7 +11,9 @@ type Sections = {
   price: boolean;
 };
 
-const AsideFilter: React.FC = () => {
+const AsideFilter = () => {
+  const { setButtonClicked, buttonClicked } = useProduct();
+
   const [sections, setSections] = useState({
     category: true,
     colors: true,
@@ -18,12 +22,6 @@ const AsideFilter: React.FC = () => {
     themes: false,
     price: false,
   });
-
-  //   const [showOptions, setShowOptions] = useState(false);
-
-  //   const toggleOptions = () => {
-  //     setShowOptions(!showOptions);
-  //   };
 
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100 });
   const [selectedValues, setSelectedValues] = useState({ min: 0, max: 100 });
@@ -42,7 +40,11 @@ const AsideFilter: React.FC = () => {
       [section]: !sections[section],
     });
   };
-
+  const handleButtonClick = (text: string) => {
+    if (!buttonClicked.includes(text)) {
+      setButtonClicked((prev) => [...prev, text]);
+    }
+  };
   return (
     <div className=" w-[300px] h-full allign  bg-white px-3 py-10">
       <div
@@ -54,10 +56,36 @@ const AsideFilter: React.FC = () => {
       </div>
       {sections.category && (
         <div className="mt-2 flex flex-col gap-2">
-          <span>Camisetas</span>
-          <span>Acessórios</span>
-          <span>Canecas</span>
-          <span>Calçados</span>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Camisetas")}
+          >
+            Camisetas
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Camisa")}
+          >
+            Camisa
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Casacos")}
+          >
+            Casacos
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Regatas")}
+          >
+            Regatas
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Blusas")}
+          >
+            Blusas
+          </button>
         </div>
       )}
       <div className="w-full h-[1px] mt-5 bg-black"></div>
@@ -71,14 +99,54 @@ const AsideFilter: React.FC = () => {
       </div>
       {sections.colors && (
         <div className="mt-2 flex flex-col gap-2">
-          <span>Preto</span>
-          <span>Vermelho</span>
-          <span>Cinza</span>
-          <span>Branco</span>
-          <span>Azul</span>
-          <span>Marrom</span>
-          <span>Verde</span>
-          <span>Roxo</span>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Preto")}
+          >
+            Preto
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Vermelho")}
+          >
+            Vermelho
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Cinza")}
+          >
+            Cinza
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Branco")}
+          >
+            Branco
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Azul")}
+          >
+            Azul
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Marrom")}
+          >
+            Marrom
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Verde")}
+          >
+            Verde
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Roxo")}
+          >
+            Roxo
+          </button>
         </div>
       )}
       <div className="w-full h-[1px] mt-5 bg-black"></div>
@@ -91,8 +159,18 @@ const AsideFilter: React.FC = () => {
       </div>
       {sections.sex && (
         <div className="mt-2 flex flex-col gap-2">
-          <span>Masculino</span>
-          <span>Feminino</span>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Masculino")}
+          >
+            Masculino
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Feminino")}
+          >
+            Feminino
+          </button>
         </div>
       )}
       <div className="w-full h-[1px] mt-5 bg-black"></div>
@@ -105,12 +183,42 @@ const AsideFilter: React.FC = () => {
       </div>
       {sections.size && (
         <div className="mt-2 flex flex-col gap-2">
-          <span>PP</span>
-          <span>P</span>
-          <span>M</span>
-          <span>G</span>
-          <span>GG</span>
-          <span>XG</span>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("PP")}
+          >
+            PP
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("P")}
+          >
+            P
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("M")}
+          >
+            M
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("G")}
+          >
+            G
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("GG")}
+          >
+            GG
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("XG")}
+          >
+            XG
+          </button>
         </div>
       )}
       <div className="w-full h-[1px] mt-5 bg-black"></div>
@@ -123,12 +231,42 @@ const AsideFilter: React.FC = () => {
       </div>
       {sections.themes && (
         <div className="mt-2 flex flex-col gap-2">
-          <span>Animes</span>
-          <span>Filmes</span>
-          <span>Jogos</span>
-          <span>RPG</span>
-          <span>Personagens</span>
-          <span>Memes</span>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Animes")}
+          >
+            Animes
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Filmes")}
+          >
+            Filmes
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Jogos")}
+          >
+            Jogos
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("RPG")}
+          >
+            RPG
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Personagens")}
+          >
+            Personagens
+          </button>
+          <button
+            className="w-full flex hover:bg-grey200 px-1"
+            onClick={() => handleButtonClick("Memes")}
+          >
+            Memes
+          </button>
         </div>
       )}
       <div className="w-full h-[1px] mt-5 bg-black"></div>
