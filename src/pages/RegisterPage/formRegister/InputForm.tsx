@@ -26,6 +26,7 @@ export function Input({
   placeholder,
   maxLength,
   value,
+  disabled,
 
   onChange,
 }: //   defaultValue,
@@ -75,6 +76,7 @@ InputProps) {
         value={onValue}
         onChange={handleChange}
         maxLength={maxLength}
+        disabled={disabled}
       />
       {/* {error} */}
     </fieldset>

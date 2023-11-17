@@ -3,7 +3,6 @@ import { PiSquaresFourFill } from "react-icons/pi";
 import { PiSquareSplitVerticalFill } from "react-icons/pi";
 import { dataProducts } from "../../mock/products";
 import CardsProducts from "../CardsProducts/CardsProducts";
-import { RiGitClosePullRequestFill } from "react-icons/ri";
 
 import { useProduct } from "../../hooks/useProduct";
 const MainProducts = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/Header";
 import AsideFilter from "../../components/AsideFilter/AsideFilter";
 import MainProducts from "../../components/MainProducts/MainProducts";
