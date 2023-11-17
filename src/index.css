@@ -1,3 +1,151 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #2563eb, #ff9900);
+  background-clip: text;
+  color: transparent;
+}
+.gradient-text-top {
+  background-image: linear-gradient(to bottom, #c04277, #fff);
+  background-clip: text;
+  color: transparent;
+}
+.gradient-star-wars {
+  background-image: linear-gradient(to right, #2563eb, aqua);
+  background-clip: text;
+  color: transparent;
+}
+.gradient-marvel {
+  background-image: linear-gradient(to right, red, white);
+  background-clip: text;
+  color: transparent;
+}
+.gradient-ring {
+  background-image: linear-gradient(to right, green, white);
+  background-clip: text;
+  color: transparent;
+}
+
+.allign {
+  margin: 0 auto;
+}
+
+.border-thin {
+  border: 1px solid #adb5bd;
+}
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.background-bt-gradient {
+  background: linear-gradient(to right, #ff8c00, #ff4500);
+}
+
+.shadow-gif {
+  border: 1.5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.textarea-mail {
+  resize: none;
+  width: 90%;
+  height: 250px;
+
+  margin-top: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 5px;
+  background-color: #e9ecef;
+}
+.slide-allign {
+  width: 100%;
+  max-width: 800px;
+  height: 384px;
+  object-fit: cover;
+}
+
+.slider {
+  height: 5px;
+  border-radius: 5px;
+  background: #ddd;
+  position: relative;
+}
+
+.slider .progress {
+  height: 5px;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: #17a2bb;
+}
+
+.shadow-aside-dashboard {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.create {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.create::before {
+  content: "Notificação";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Righteous", cursive;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.create:hover::before {
+  opacity: 1;
+}
+
+.logout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: transparent;
+}
+.logout::before {
+  content: "Sair";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Righteous", cursive;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.logout:hover::before {
+  opacity: 1;
+}
