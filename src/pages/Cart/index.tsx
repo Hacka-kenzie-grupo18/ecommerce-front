@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { BiSolidMessageSquareDetail } from 'react-icons/bi'
 import { BsCartCheckFill, BsFillHeartFill } from 'react-icons/bs'
 import { FaArrowLeft, FaUserAlt } from 'react-icons/fa'
@@ -7,29 +7,10 @@ import { SlOptionsVertical } from 'react-icons/sl'
 import { Link } from 'react-router-dom'
 import Foto1 from '../../assets/foto1.jpg'
 import Footer from '../../components/Footer'
+import { CartContext } from '../../context/CartContext'
 
 const Cart = () => {
-  const [isScreenSmall, setIsScreenSmall] = useState(false)
-  const [tabIsOpen, setTabIsOpen] = useState(false)
-
-  const tabDeleteAndSave = () => {
-    setTabIsOpen(!tabIsOpen)
-  }
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 760px)')
-    setIsScreenSmall(mediaQuery.matches)
-
-    const mediaQueryListener = (event: MediaQueryListEvent) => {
-      setIsScreenSmall(event.matches)
-    }
-
-    mediaQuery.addListener(mediaQueryListener)
-
-    return () => {
-      mediaQuery.removeListener(mediaQueryListener)
-    }
-  }, [])
+  const { isScreenSmall, tabDeleteAndSave, tabIsOpen } = useContext(CartContext)
 
   return (
     <>

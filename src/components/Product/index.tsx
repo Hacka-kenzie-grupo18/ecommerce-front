@@ -1,10 +1,21 @@
+import { useContext } from 'react'
 import { BsCheckLg } from 'react-icons/bs'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { LiaStarSolid } from 'react-icons/lia'
 import { MdOutlineMessage } from 'react-icons/md'
+import { ProductContext } from '../../context/ProductContext'
+import { productsProps } from '../../context/ProductContext/types'
 // import { IoIosClose } from 'react-icons/io'
 
-const Product = () => {
+const Product = (product: productsProps) => {
+  const { addToCart } = useContext(ProductContext)
+  console.log(product.name)
+
+  const handleAddToCart = () => {
+    console.log('ola', product.name)
+    addToCart(product)
+  }
+
   return (
     <section className='p-2 bg-grey200 w-full m-auto mt-8 flex flex-col items-center lg:flex-row md:justify-center lg:gap-10'>
       <div className='bg-whiteFixed border-2 w-[370px] h-[370px] p-2 flex justify-center items-center'>
@@ -54,7 +65,10 @@ const Product = () => {
             <small className='text-grey600'>para membros do clube</small>
           </div>
         </div>
-        <button className='text-whiteFixed mt-4 m-auto w-[100%] lg:max-w-[280px] h-[40px] bg-primary rounded-4'>
+        <button
+          className='text-whiteFixed mt-4 m-auto w-[100%] lg:max-w-[280px] h-[40px] bg-primary rounded-4'
+          onClick={handleAddToCart}
+        >
           Adicionar ao carrinho
         </button>
       </div>
