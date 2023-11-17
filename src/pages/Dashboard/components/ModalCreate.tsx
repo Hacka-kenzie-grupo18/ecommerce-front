@@ -130,7 +130,7 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             Descrição
             <textarea
               placeholder="Descreva o produto..."
-              className="w-full font-bold border-thin resize-none  h-20  font-400 px-2 py-1 text-black"
+              className="w-full  border-thin resize-none  h-20  font-400 px-2 py-1 text-black"
             ></textarea>
           </label>
           <div className="mt-[42px] flex justify-end gap-[10px]">
