@@ -3,10 +3,12 @@ import { PiSquaresFourFill } from "react-icons/pi";
 import { PiSquareSplitVerticalFill } from "react-icons/pi";
 import { dataProducts } from "../../mock/products";
 import CardsProducts from "../CardsProducts/CardsProducts";
+import { RiGitClosePullRequestFill } from "react-icons/ri";
+
 import { useProduct } from "../../hooks/useProduct";
 const MainProducts = () => {
   const [ativo, setAtivo] = useState("PiSquareSplitVerticalFill");
-  const { buttonClicked } = useProduct();
+  const { buttonClicked, setButtonClicked } = useProduct();
   const handleClick = (botao: React.SetStateAction<string>) => {
     setAtivo(botao);
   };
@@ -16,6 +18,11 @@ const MainProducts = () => {
   const handleClickActive = (elem: React.SetStateAction<boolean>) => {
     setActive(elem);
   };
+
+  const handleRemoveButtonClick = (textToRemove: string) => {
+    setButtonClicked((prev) => prev.filter((text) => text !== textToRemove));
+  };
+
   const totalItems = dataProducts.length;
 
   useEffect(() => {
@@ -68,13 +75,15 @@ const MainProducts = () => {
           </button>
         </div>
       </div>
-      <div className="h-10 w-full bem-aqui gap-1 text-[12px] flex py-2">
+      <div className="h-10 w-full  gap-1 text-[12px] flex py-2">
         {buttonClicked.map((text, index) => (
           <button
             key={index}
-            className="h-[95%] flex items-center rounded w-fit px-1 border-thin  font-bold"
+            className="h-[95%] flex gap-2 items-center rounded w-fit px-1 border-thin  font-bold"
+            onClick={() => handleRemoveButtonClick(text)}
           >
             {text}
+            <span className="text-grey500">X</span>
           </button>
         ))}
       </div>
@@ -95,7 +104,6 @@ const MainProducts = () => {
             rating={elem.rating}
             id={elem.id}
             price={elem.price}
-            promotion={elem.promotion}
             description={elem.description}
             active={active}
           />

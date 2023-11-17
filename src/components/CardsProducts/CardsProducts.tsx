@@ -12,7 +12,6 @@ interface CardProps {
   image: string;
   rating: string;
   sex?: string;
-  promotion?: string;
   description: string;
   active: boolean;
 }
@@ -24,7 +23,6 @@ const CardsProducts = ({
   theme,
   image,
   sex,
-  promotion,
   rating,
   description,
   active,
@@ -45,6 +43,8 @@ const CardsProducts = ({
         return "text-yellow-500 border-b-yellow-500";
       case "branco":
         return "text-grey600 border-b-grey300";
+      case "roxo":
+        return "text-indigo-500 border-b-indigo-500";
       default:
         return "text-black border-b-grey300";
     }
@@ -77,8 +77,8 @@ const CardsProducts = ({
             <div className="mt-4 ml-3 border-thin rounded-xl maxsm:text-[13px] w-fit flex text-[25px]">
               <h4 className="px-2">R${price}</h4>
               <span className="h-full w-[2px] bg-grey400 "></span>
-              <div className="text-[16px] font-bold text-grey600 rounded-r-xl pr-2 bg-primary100 pl-2 h-full flex justify-center w-full items-center">
-                <h4>R${promotion}</h4>
+              <div className="text-[12px] font-bold text-blue-700 rounded-r-xl pr-2 bg-sky-200 pl-2 h-full flex justify-center w-full items-center">
+                <h4>CUPOM</h4>
               </div>
             </div>
             <div className="pl-4 gap-2 flex items-center">
@@ -123,8 +123,8 @@ const CardsProducts = ({
               <div className="mt-4 ml-3 border-thin rounded-xl  w-fit flex text-[15px]  maxsm:text-[12px]">
                 <h4 className="px-2">R${price}</h4>
                 <span className="h-full w-[2px] bg-grey400 "></span>
-                <div className="text-[12px]  maxsm:text-[10px] font-bold text-grey600 rounded-r-xl pr-2 bg-primary100 pl-2 h-full flex justify-center w-full items-center">
-                  <h4>R${promotion}</h4>
+                <div className="text-[12px] font-bold text-blue-700 rounded-r-xl pr-2 bg-sky-200 pl-2 h-full flex justify-center w-full items-center">
+                  <h4>CUPOM</h4>
                 </div>
               </div>
               <div className="pl-4  gap-2 flex items-center">
