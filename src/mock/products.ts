@@ -107,6 +107,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 20,
   },
   {
     id: 2,
@@ -121,6 +122,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 30,
   },
   {
     id: 3,
@@ -135,6 +137,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 35,
   },
   {
     id: 4,
@@ -149,6 +152,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 40,
   },
   {
     id: 5,
@@ -163,6 +167,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 20,
   },
   {
     id: 6,
@@ -177,6 +182,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 50,
   },
   {
     id: 7,
@@ -192,6 +198,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 30,
   },
   {
     id: 8,
@@ -206,6 +213,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 22,
   },
   {
     id: 9,
@@ -220,6 +228,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 10,
   },
   {
     id: 10,
@@ -234,5 +243,6 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 20,
   },
 ];

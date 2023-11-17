@@ -4,9 +4,19 @@ import { FaUserGear, FaBuildingUser } from "react-icons/fa6";
 import { PiFolderSimpleUserFill } from "react-icons/pi";
 import ModalCreateProduct from "./ModalCreate";
 
+import { useProduct } from "../../../hooks/useProduct";
+
 const AsideAdmin = () => {
+  const { setSortDirection } = useProduct();
   const [isOpenModal, setIsOpenModal] = useState(false);
   const toggleModal = () => setIsOpenModal(!isOpenModal);
+
+  const handleSortAsc: () => void = () => {
+    setSortDirection("desc");
+  };
+  const handleSortDesc: () => void = () => {
+    setSortDirection("asc");
+  };
 
   return (
     <aside className="w-[25%] background-aside-dash shadow-aside-dashboard max-w-[300px]  h-full">
@@ -44,7 +54,10 @@ const AsideAdmin = () => {
           </button>
         </div>
         <div className="flex justify-center   items-center h-fit ">
-          <button className="flex border-black rounded maxsm:justify-center maxsm:rounded-full maxsm:rouded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center">
+          <button
+            className="flex border-black rounded maxsm:justify-center maxsm:rounded-full maxsm:rouded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center "
+            onClick={handleSortAsc}
+          >
             <span className=" font-bold text-[22px]">
               <PiFolderSimpleUserFill />
             </span>
@@ -52,7 +65,10 @@ const AsideAdmin = () => {
           </button>
         </div>
         <div className="flex justify-center   items-center h-fit ">
-          <button className="flex border-black rounded maxsm:justify-center maxsm:rounded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center">
+          <button
+            onClick={handleSortDesc}
+            className="flex border-black rounded maxsm:justify-center maxsm:rounded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center"
+          >
             <span className=" font-bold text-[22px]">
               <PiFolderSimpleUserFill />
             </span>
