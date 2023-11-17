@@ -1,5 +1,6 @@
-import Comments from '../Comments'
-import Description from '../Description'
+import Comments from "../Comments"
+import Description from "../Description"
+
 
 const DescriptionAndComment = () => {
   return (

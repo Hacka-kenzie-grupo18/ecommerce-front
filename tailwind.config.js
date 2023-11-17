@@ -44,6 +44,8 @@ export default {
         random10: '#6100FF',
         random11: '#5700E3',
         random12: '#30007D',
+        random13: '#00B517',
+
       },
       fontWeight: {
         700: "700",

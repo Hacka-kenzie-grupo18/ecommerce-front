@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import Cart from '../pages/Cart'
 import DashboardAdmin from '../pages/Dashboard/DashboardAdmin'
 import HomePage from '../pages/Home/HomePage'
 import Login from '../pages/Login/login'
@@ -10,6 +11,7 @@ export const RoutesMain = () => {
   return (
     <Routes>
       <Route path='/' element={<HomePage />} />
+      <Route path='/cart' element={<Cart />} />
       <Route path='/product' element={<ProductPage />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />

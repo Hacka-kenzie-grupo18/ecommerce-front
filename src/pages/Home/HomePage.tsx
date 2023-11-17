@@ -1,10 +1,11 @@
 import CardsPromoInfo from '../../components/CardsPromoInfo/CardsPromo'
-import Footer from '../../components/Swiper/Footer'
+import Footer from '../../components/Footer'
+
 import Header from '../../components/Header'
 import HeaderPromotion from '../../components/HeaderPromotion/HeaderPromotion'
 import MailAreaHome from '../../components/MailAreaHome/MailAreaHome'
 import AnimatedBanner from '../../components/MovPromotion/AnimatedBanner'
-import Newsletter from '../../components/Select/Newsletter'
+import Newsletter from '../../components/Newsletter'
 import PromotionTime from '../../components/PromotionTime/PromotionTime'
 import SwiperHome from '../../components/Swiper/SwiperHome'
 import ThemesPromotionMarvel from '../../components/ThemesProducts/ThemePromotionMarvel'
