@@ -108,8 +108,8 @@
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
-  color: black;
+  background-color: #0d6efd;
+  color: white;
   font-size: 15px;
   font-weight: 600;
   font-family: "Righteous", cursive;
@@ -136,8 +136,8 @@
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
-  color: black;
+  background-color: #ff6961;
+  color: white;
   font-size: 15px;
   font-weight: 600;
   font-family: "Righteous", cursive;
@@ -148,4 +148,11 @@
 
 .logout:hover::before {
   opacity: 1;
+}
+
+.background-aside-dash {
+  background-color: #add8e6;
+}
+.background-gradient-create {
+  background: linear-gradient(to top, #2563eb, black);
 }

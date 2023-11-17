@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Modal } from "../../../components/ModalDefault/Modal";
 import { GrClose } from "react-icons/gr";
 import { Input } from "../../RegisterPage/formRegister/InputForm";
@@ -9,6 +9,12 @@ interface ModalCreateProductProps {
 }
 
 const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
+  const [checkboxAtivo, setCheckboxAtivo] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setCheckboxAtivo(!checkboxAtivo);
+  };
+
   return (
     <Modal toggleModal={toggleModal}>
       <div className="bg-white h-fit  w-screen max-w-[530px] top-10  rounded-2xl p-[25px] flex-col overflow-auto  pb-[100px] relative">
@@ -43,7 +49,6 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
               placeholder="Coloque o link da imagem..."
               type="text"
             ></Input>
-
             <Input
               id="image-two"
               label="Imagem2"
@@ -52,23 +57,45 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             ></Input>
           </div>
           <div className="flex gap-4">
+            <div className="flex gap-4 justify-center items-center w-[48%]">
+              <label
+                className={`cursor-pointer flex items-center border-thin p-3 rounded-xl  text-primary ${
+                  checkboxAtivo ? "bg-green-500 text-white " : ""
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={checkboxAtivo}
+                  onChange={handleCheckboxChange}
+                  className="hidden"
+                />
+                <span className="ml-2">Ativar Promoção</span>
+              </label>
+            </div>
+            <Select id="category" label="Categoria">
+              <option value="default" hidden>
+                Defina a categoria
+              </option>
+              <option value="camiseta">Camiseta</option>
+              <option value="camisa">Camisa</option>
+              <option value="blusa">Blusa</option>
+              <option value="regata">Regata</option>
+            </Select>
+          </div>
+          <div className="flex gap-4">
             <Input
               id="price"
               label="Preço"
               placeholder="Digite o preço por unidade..."
               type="text"
             ></Input>
-            <Select id="size" label="Tamanho">
-              <option value="default" hidden>
-                O tamanho do produto
-              </option>
-              <option value="PP">PP</option>
-              <option value="P">P</option>
-              <option value="M">M</option>
-              <option value="G">G</option>
-              <option value="GG">GG</option>
-              <option value="XG">XG</option>
-            </Select>
+            <Input
+              id="promotion"
+              label="Valor promocional"
+              placeholder="valor promocional..."
+              type="text"
+              disabled={!checkboxAtivo}
+            />
           </div>
           <div className="flex gap-4 w-full">
             <Input
@@ -79,10 +106,11 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             ></Input>
             <Select id="sex" label="Sexo">
               <option value="default" hidden>
-                Defina o sexo
+                Defina o sexo...
               </option>
               <option value="man">Masculino</option>
               <option value="female">Feminino</option>
+              <option value="unissex">Unissex</option>
             </Select>
           </div>
 
@@ -92,13 +120,25 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             placeholder="Digite o tema do produto..."
             type="text"
           ></Input>
-
+          <Input
+            id="size"
+            label="Tamanhos"
+            placeholder="Digite os tamanhos possíveis..."
+            type="text"
+          ></Input>
+          <label className="gap-2 flex flex-col text-[14px] font-500 text-primary">
+            Descrição
+            <textarea
+              placeholder="Descreva o produto..."
+              className="w-full  border-thin resize-none  h-20  font-400 px-2 py-1 text-black"
+            ></textarea>
+          </label>
           <div className="mt-[42px] flex justify-end gap-[10px]">
             <button className="bg-grey6 h-[48px] w-[126px] text-grey2 font-600 text-[16px] rounded">
               Cancelar
             </button>
-            <button className="bg-primary100 w-[193px] h-[48px] rounded text-white">
-              Criar anúncio
+            <button className="bg-blue-400 w-[193px] font-bold h-[48px] rounded text-white">
+              Criar produto
             </button>
           </div>
         </form>

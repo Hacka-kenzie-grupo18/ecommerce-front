@@ -15,7 +15,7 @@ export function Select({ id, label, children, ...rest }: InputProps) {
         {label}
       </label>
       <select
-        className="h-12 w-full outline-none bg-whiteFixed text-grey3 rounded-4 border-2 border-grey4 hover:bg-grey9 focus:border-brand1 px-4"
+        className="h-12 w-full outline-none bg-whiteFixed text-grey3 rounded-4 border-2 border-grey4 hover:bg-grey9 focus:border-primary px-4"
         id={id}
         {...rest}
       >

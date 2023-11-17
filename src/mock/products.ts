@@ -99,7 +99,6 @@ export const dataProducts = [
     color: "Preto",
     size: ["PP", "P", "M", "G", "GG", "XG"],
     price: "73,00",
-    promotion: "55,00",
     theme: "herois",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -108,6 +107,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 20,
   },
   {
     id: 2,
@@ -115,7 +115,6 @@ export const dataProducts = [
     color: "Azul",
     size: ["PP", "P", "M", "G", "GG", "XG"],
     price: "65,00",
-    promotion: "45,00",
     theme: "desenhos",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -123,6 +122,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 30,
   },
   {
     id: 3,
@@ -130,7 +130,6 @@ export const dataProducts = [
     color: "Vermelho",
     size: ["PP", "P", "M", "G", "GG", "XG"],
     price: "60,00",
-    promotion: "40,00",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     theme: "Filmes",
@@ -138,6 +137,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 35,
   },
   {
     id: 4,
@@ -145,7 +145,6 @@ export const dataProducts = [
     color: "Branco",
     size: ["P", "M", "G", "GG"],
     price: "45,00",
-    promotion: "25,00",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     theme: "herois",
@@ -153,6 +152,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 40,
   },
   {
     id: 5,
@@ -160,7 +160,6 @@ export const dataProducts = [
     color: "Cinza",
     size: ["P", "M", "G", "GG"],
     price: "80,00",
-    promotion: "60,00",
     theme: "Filmes",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -168,6 +167,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 20,
   },
   {
     id: 6,
@@ -175,7 +175,6 @@ export const dataProducts = [
     color: "Azul",
     size: ["P", "M", "G"],
     price: "110,00",
-    promotion: "90,00",
     theme: "Filmes",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -183,6 +182,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 50,
   },
   {
     id: 7,
@@ -190,7 +190,7 @@ export const dataProducts = [
     color: "Preto",
     size: ["P", "M", "G"],
     price: "120,00",
-    promotion: "100,00",
+
     theme: "Filmes",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -198,6 +198,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 30,
   },
   {
     id: 8,
@@ -205,7 +206,6 @@ export const dataProducts = [
     color: "verde",
     size: ["P", "M", "G"],
     price: "55,00",
-    promotion: "35,00",
     theme: "Filmes",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -213,6 +213,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Feminino",
+    stock: 22,
   },
   {
     id: 9,
@@ -220,7 +221,6 @@ export const dataProducts = [
     color: "Preto",
     size: ["PP, P, M, G, GG, XG"],
     price: "25,00",
-    promotion: "15,00",
     theme: "Jogos",
     rating: "2.1",
     description:
@@ -228,6 +228,7 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Unissex",
+    stock: 10,
   },
   {
     id: 10,
@@ -235,7 +236,6 @@ export const dataProducts = [
     color: "Verde",
     size: ["M", "G", "GG"],
     price: "70,00",
-    promotion: "50,00",
     theme: "Animes",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -243,5 +243,6 @@ export const dataProducts = [
     image:
       "https://static3.tcdn.com.br/img/img_prod/460977/camiseta_feminina_unissex_logo_avengers_ink_os_vingadores_tinta_marvel_preta_ev_90777_1_c7c70317bf980179476d984747ef6a2f.jpg",
     sex: "Masculino",
+    stock: 20,
   },
 ];

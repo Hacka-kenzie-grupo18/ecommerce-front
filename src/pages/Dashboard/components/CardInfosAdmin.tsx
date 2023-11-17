@@ -1,87 +1,50 @@
-import React, { useState } from "react";
-import foto1 from "../../../assets/foto1.jpg";
+import { useState } from "react";
+
 import { BiEdit } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
 import ModalDelete from "./ModalDelete";
+import { useProduct } from "../../../hooks/useProduct";
+import { dataProducts } from "../../../mock/products";
+import { IProducts } from "../../../interfaces/products";
+interface CardInfosAdminProps {
+  search: string;
+  sortFunction?: (a: IProducts, b: IProducts) => number | null;
+}
 
-const CardInfosAdmin = () => {
+const CardInfosAdmin = ({ search }: CardInfosAdminProps) => {
+  const { sortDirection, sortAsc, sortDesc } = useProduct();
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isName, setIsName] = useState("");
   const toggleModal = () => setIsOpenModal(!isOpenModal);
-  const data = [
-    {
-      stock: 30,
-      name: "Camiseta preta StarWars",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 30,
-      name: "Camiseta preta StarWars",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 30,
-      name: "Camiseta preta StarWars",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 30,
-      name: "Camiseta preta StarWars",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 50,
-      name: "Camiseta preta Marvel",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 50,
-      name: "Camiseta preta Marvel",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 50,
-      name: "Camiseta verde Dumbledore",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-    {
-      stock: 50,
-      name: "Camiseta rosa Marvel",
-      createdAt: "25 de janeiro",
-      DisponibleSize: "P, PP, M, G",
-    },
-  ];
 
+  const filteredData = dataProducts.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const sortedData = [...filteredData].sort(
+    sortDirection === "asc" ? sortAsc : sortDesc
+  );
+  console.log("Sorted Data", sortedData);
   return (
     <>
       {" "}
-      {data.map((data, index) => (
+      {sortedData.map((data, index) => (
         <div
           key={index}
           className="bg-white w-64 h-96 border-2 rounded border-black"
         >
-          <img src={foto1} alt="" className="w-full h-[50%]" />
+          <img src={data.image} alt="" className="w-full h-[50%]" />
           <div className="p-4">
             <h6 className="text-[12px] mb-2">{data.name}</h6>
             <h6>
               Em estoque: <span className="font-bold"> {data.stock}</span>{" "}
             </h6>
             <h6>
-              Criado: <span className="font-bold"> {data.createdAt}</span>{" "}
+              Criado: <span className="font-bold"> {data.sex}</span>{" "}
             </h6>
             <h6>
               Tamanhos:{" "}
-              <span className="font-bold text-[11px]">
-                {" "}
-                {data.DisponibleSize}
-              </span>{" "}
+              <span className="font-bold text-[11px]"> {data.size}</span>{" "}
             </h6>
             <div className="w-full justify-center flex">
               <div className="w-full h-12 justify-center flex gap-6 items-center">
