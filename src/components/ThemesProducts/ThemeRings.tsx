@@ -45,7 +45,7 @@ const ThemesPromotionRings = () => {
         {productStarWars.map((product: Product, index: number) => (
           <div
             key={product.id}
-            className={`w-52 h-[50%] bg-white border-thin  cursor-pointer  flex justify-center flex-col items-center`}
+            className={`w-52 h-[50%] hover:bg-grey8 bg-white border-thin  cursor-pointer  flex justify-center flex-col items-center`}
             style={{
               display:
                 (index >= 6 && windowWidth < 1400) ||
