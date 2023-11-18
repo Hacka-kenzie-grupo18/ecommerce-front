@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { BiUserPlus } from "react-icons/bi";
 import { FaUserGear, FaBuildingUser } from "react-icons/fa6";
-import { PiFolderSimpleUserFill } from "react-icons/pi";
+import { LiaFirstOrder } from "react-icons/lia";
+import { LiaJediOrder } from "react-icons/lia";
 import ModalCreateProduct from "./ModalCreate";
 
 import { useProduct } from "../../../hooks/useProduct";
@@ -20,7 +21,7 @@ const AsideAdmin = () => {
 
   return (
     <aside className="w-[25%] background-aside-dash shadow-aside-dashboard max-w-[300px]  h-full">
-      <div className="h-[100px] w-full flex justify-center border-b-2 items-center bg-primary">
+      <div className="h-[100px] w-full flex justify-center border-b-2 items-center background-animated border-r-2 border-white">
         <h2 className="text-[20px] maxsm:text-[11px] text-white  font-bold ">
           Culture Nerd
         </h2>
@@ -55,11 +56,11 @@ const AsideAdmin = () => {
         </div>
         <div className="flex justify-center   items-center h-fit ">
           <button
-            className="flex border-black rounded maxsm:justify-center maxsm:rounded-full maxsm:rouded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center "
+            className="flex border-black rounded hover:border-white maxsm:justify-center maxsm:rounded-full maxsm:rouded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center "
             onClick={handleSortAsc}
           >
             <span className=" font-bold text-[22px]">
-              <PiFolderSimpleUserFill />
+              <LiaFirstOrder />
             </span>
             <p className="maxsm:hidden">+ Estoques</p>
           </button>
@@ -67,10 +68,10 @@ const AsideAdmin = () => {
         <div className="flex justify-center   items-center h-fit ">
           <button
             onClick={handleSortDesc}
-            className="flex border-black rounded maxsm:justify-center maxsm:rounded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center"
+            className="flex border-black rounded hover:border-white maxsm:justify-center maxsm:rounded-full shadow-aside-dashboard border-2  justify-between px-4 w-[70%] text-[12px] font-bold bg-grey300 h-12 items-center"
           >
             <span className=" font-bold text-[22px]">
-              <PiFolderSimpleUserFill />
+              <LiaJediOrder />
             </span>
             <p className="maxsm:hidden">- Estoques</p>
           </button>

@@ -1,9 +1,4 @@
-import { ReactNode, useState } from "react";
-import {
-  inserMaskInPhone,
-  // insertMaskInCEP,
-  insertMaskInCpf,
-} from "../../../functions/Masks";
+import { ReactNode } from "react";
 
 interface InputProps {
   id: string;
@@ -16,69 +11,34 @@ interface InputProps {
   error?: ReactNode;
   readOnly?: boolean;
   disabled?: boolean;
+  defaultValue?: string;
   onChange?: (value: string) => void;
 }
-
 export function Input({
   id,
   label,
   type,
   placeholder,
-  maxLength,
-  value,
+  defaultValue,
+  register,
   disabled,
-
-  onChange,
-}: //   defaultValue,
-//   register,
-//   error,
-InputProps) {
-  const [onValue, setValue] = useState(value || "");
-  const isCPF = type === "cpf";
-  const isPhone = type === "tel";
-  const isCEP = id === "cep";
-
-  const handleFieldChange = (newValue: string) => {
-    if (onChange) {
-      onChange(newValue);
-    }
-  };
-
-  console.log(value);
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (isCPF) {
-      const newValue = insertMaskInCpf(event.target.value);
-      setValue(newValue);
-      handleFieldChange(newValue);
-    } else if (isPhone) {
-      const newValue = inserMaskInPhone(event.target.value);
-      setValue(newValue);
-      handleFieldChange(newValue);
-    } else if (isCEP) {
-      setValue(event.target.value);
-      handleFieldChange(event.target.value);
-    } else {
-      setValue(event.target.value);
-      handleFieldChange(event.target.value);
-    }
-  };
-
+  error,
+}: InputProps) {
   return (
     <fieldset className="relative flex flex-col gap-2 border-none">
-      <label htmlFor={id} className="font-500 text-[14px] text-[#2563eb]">
+      <label htmlFor={id} className="font-500 text-sm text-primary">
         {label}
       </label>
       <input
-        className="h-12 w-full outline-none bg-whiteFixed text-grey1 rounded-4 border-2 border-grey4 hover:bg-grey9 focus-border-[#2563eb] px-4 font-semibold"
+        className="h-12 w-full outline-none bg-whiteFixed text-grey1 rounded-4 border-2 border-grey4 hover:bg-grey9 focus:border-primary px-4"
         type={type}
         placeholder={placeholder}
         id={id}
-        value={onValue}
-        onChange={handleChange}
-        maxLength={maxLength}
+        defaultValue={defaultValue}
         disabled={disabled}
+        {...register}
       />
-      {/* {error} */}
+      {error}
     </fieldset>
   );
 }

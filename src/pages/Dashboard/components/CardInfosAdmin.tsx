@@ -24,7 +24,7 @@ const CardInfosAdmin = ({ search }: CardInfosAdminProps) => {
   const sortedData = [...filteredData].sort(
     sortDirection === "asc" ? sortAsc : sortDesc
   );
-  console.log("Sorted Data", sortedData);
+
   return (
     <>
       {" "}

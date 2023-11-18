@@ -4,7 +4,7 @@ interface InputProps {
   id: string;
   label: string;
   children: ReactNode;
-  //   register?: object;
+  register?: object;
   disabled?: boolean;
 }
 

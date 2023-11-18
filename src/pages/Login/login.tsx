@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Input } from "../RegisterPage/formRegister/InputForm";
 
 const Login = () => {
-  const [backgroundImage, setBackgroundImage] = useState('')
+  const [backgroundImage, setBackgroundImage] = useState("");
 
   useEffect(() => {
     const images = [
@@ -26,48 +26,51 @@ const Login = () => {
     const randomIndex = Math.floor(Math.random() * images.length);
     setBackgroundImage(images[randomIndex]);
   }, []);
-  
-    return(
-        <main className="w-[100%] h-[100vh]">
+
+  return (
+    <main className="w-[100%] h-[100vh]">
       <div
-        className='flex justify-center items-center'
+        className="flex justify-center items-center"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          backgroundAttachment: 'fixed',
-          width: '100%',
-          height: '100%',
-          paddingBottom: '25px',
-          paddingTop: '25px',
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundAttachment: "fixed",
+          width: "100%",
+          height: "100%",
+          paddingBottom: "25px",
+          paddingTop: "25px",
         }}
       >
-        <section className='w-[90%] max-w-[400px] h-[500px] h-fit pb-7 bg-white bg-opacity-70 rounded-xl'>
-          <div className='w-full h-20% flex items-center mt-4 flex-col'>
-            <h1 className='font-kenia text-[50px] mt-8 h-[55px] gradient-text'>
+        <section className="w-[90%] max-w-[400px] h-[500px]  pb-7 bg-white bg-opacity-70 rounded-xl">
+          <div className="w-full h-20% flex items-center mt-4 flex-col">
+            <h1 className="font-kenia text-[50px] mt-8 h-[55px] gradient-text">
               Cultura Geek
             </h1>
-            <span className='font-pixelify font-bold'>Geeks Life</span>
-            <p className='mt-6 text-sm font-roboto font-bold'>LOGIN</p>
+            <span className="font-pixelify font-bold">Geeks Life</span>
+            <p className="mt-6 text-sm font-roboto font-bold">LOGIN</p>
           </div>
 
-                    <form className="m-8">
-                        <Input
-                            id="email"
-                        label="Email"
-                            placeholder="Digite seu email"
-                            type="email"></Input>
-                        <Input
-                            id="password"
-                            label="Senha"
-                            placeholder="Digite sua password" type="password"></Input>
-                    </form>
+          <form className="m-8">
+            <Input
+              id="email"
+              label="Email"
+              placeholder="Digite seu email"
+              type="email"
+            ></Input>
+            <Input
+              id="password"
+              label="Senha"
+              placeholder="Digite sua password"
+              type="password"
+            ></Input>
+          </form>
 
-          <div className='flex justify-center m-4'>
-            <p className='text-[17px] mt-4 font-semibold '>
-              Ainda não faz parte?{' '}
-              <Link to={`/register`} className='hover:underline text-blue-600'>
-                Clique aqui{' '}
+          <div className="flex justify-center m-4">
+            <p className="text-[17px] mt-4 font-semibold ">
+              Ainda não faz parte?{" "}
+              <Link to={`/register`} className="hover:underline text-blue-600">
+                Clique aqui{" "}
               </Link>
               e cadastre-se!
             </p>
@@ -75,7 +78,7 @@ const Login = () => {
         </section>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

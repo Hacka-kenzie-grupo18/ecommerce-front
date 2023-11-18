@@ -3,6 +3,10 @@ import { Modal } from "../../../components/ModalDefault/Modal";
 import { GrClose } from "react-icons/gr";
 import { Input } from "../../RegisterPage/formRegister/InputForm";
 import { Select } from "../../../components/Select/Select";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { productSchema } from "../../../schemas/product/product";
+import { TProducts } from "../../../interfaces/products";
 
 interface ModalCreateProductProps {
   toggleModal: () => void;
@@ -14,6 +18,15 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
   const handleCheckboxChange = () => {
     setCheckboxAtivo(!checkboxAtivo);
   };
+  const { register, handleSubmit } = useForm<TProducts>({
+    resolver: zodResolver(productSchema),
+    mode: "onChange",
+  });
+
+  const onSubmit: SubmitHandler<TProducts> = (data) => {
+    console.log("Dados do formulário:", data);
+    toggleModal();
+  };
 
   return (
     <Modal toggleModal={toggleModal}>
@@ -21,12 +34,16 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
         <h3 className="text-grey1 font-lexend text-[18px] mb-[30px]">
           Criar produto
         </h3>
-        <form className="p-[5px] flex flex-col gap-4 px-4">
+        <form
+          className="p-[5px] flex flex-col gap-4 px-4"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className="flex gap-4">
             <Input
               id="name"
               label="Nome"
               placeholder="Digite o nome do produto"
+              register={register("title")}
               type="text"
             ></Input>
             <Input
@@ -34,6 +51,7 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
               label="Quantidade"
               placeholder="Digite quantidade de produtos..."
               type="number"
+              register={register("stock")}
             ></Input>
           </div>
           <Input
@@ -41,6 +59,7 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             label="Imagem principal"
             placeholder="Coloque o link da imagem..."
             type="text"
+            register={register("images.imagePrincipal")}
           ></Input>
           <div className="flex gap-4">
             <Input
@@ -48,12 +67,14 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
               label="Imagem1"
               placeholder="Coloque o link da imagem..."
               type="text"
+              register={register("images.image1")}
             ></Input>
             <Input
               id="image-two"
               label="Imagem2"
               placeholder="Coloque o link da imagem..."
               type="text"
+              register={register("images.image2")}
             ></Input>
           </div>
           <div className="flex gap-4">
@@ -72,7 +93,11 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
                 <span className="ml-2">Ativar Promoção</span>
               </label>
             </div>
-            <Select id="category" label="Categoria">
+            <Select
+              id="category"
+              label="Categoria"
+              register={register("category")}
+            >
               <option value="default" hidden>
                 Defina a categoria
               </option>
@@ -88,12 +113,14 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
               label="Preço"
               placeholder="Digite o preço por unidade..."
               type="text"
+              register={register("price")}
             ></Input>
             <Input
               id="promotion"
               label="Valor promocional"
               placeholder="valor promocional..."
               type="text"
+              register={register("promotion")}
               disabled={!checkboxAtivo}
             />
           </div>
@@ -103,6 +130,7 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
               label="Cores"
               placeholder="Coloque a(as) cor(cores) do produto..."
               type="text"
+              register={register("color")}
             ></Input>
             <Select id="sex" label="Sexo">
               <option value="default" hidden>
@@ -119,25 +147,36 @@ const ModalCreateProduct = ({ toggleModal }: ModalCreateProductProps) => {
             label="Temas"
             placeholder="Digite o tema do produto..."
             type="text"
+            register={register("theme")}
           ></Input>
           <Input
             id="size"
             label="Tamanhos"
             placeholder="Digite os tamanhos possíveis..."
             type="text"
+            register={register("size")}
           ></Input>
           <label className="gap-2 flex flex-col text-[14px] font-500 text-primary">
             Descrição
             <textarea
               placeholder="Descreva o produto..."
               className="w-full  border-thin resize-none  h-20  font-400 px-2 py-1 text-black"
+              {...register("description")}
             ></textarea>
           </label>
           <div className="mt-[42px] flex justify-end gap-[10px]">
-            <button className="bg-grey6 h-[48px] w-[126px] text-grey2 font-600 text-[16px] rounded">
+            <button
+              onClick={toggleModal}
+              type="button"
+              className="bg-grey6 h-[48px] w-[126px] text-grey2 font-600 text-[16px] rounded"
+            >
               Cancelar
             </button>
-            <button className="bg-blue-400 w-[193px] font-bold h-[48px] rounded text-white">
+            <button
+              onClick={handleSubmit(onSubmit)}
+              type="submit"
+              className="bg-blue-400 w-[193px] font-bold h-[48px] rounded text-white"
+            >
               Criar produto
             </button>
           </div>

@@ -1,3 +1,6 @@
+import { z } from "zod";
+import { productSchema } from "../schemas/product/product";
+
 export interface IProducts {
   id: number;
   name: string;
@@ -11,3 +14,5 @@ export interface IProducts {
   sex: string;
   stock: number;
 }
+
+export type TProducts = z.infer<typeof productSchema>;
