@@ -3,7 +3,7 @@ import imgPromo from "../../assets/homeImages/foto1.jpg";
 const HeaderPromotion = () => {
   return (
     <div className="h-[410px] w-full bg-white mt-[15px] p-4 flex border-grey6  rounded border-2">
-      <div className="flex flex-col gap-4 justify-center px-2 w-[20%]">
+      <div className="flex flex-col gap-4 maxsm:hidden justify-center px-2 w-[20%]">
         <button className="text-left font-roboto font-semibold text-grey2 hover:bg-brand2 rounded px-2 py-1">
           Animes
         </button>
@@ -29,7 +29,7 @@ const HeaderPromotion = () => {
           Personagens
         </button>
       </div>
-      <div className="w-[55%] ml-2 justify-center items-center ">
+      <div className="w-[55%] ml-2 maxsm:w-full justify-center items-center ">
         <div
           style={{
             backgroundImage: `url(${imgPromo})`,
@@ -52,7 +52,7 @@ const HeaderPromotion = () => {
           </div>
         </div>
       </div>
-      <div className="w-[23%] ml-2  gap-2 flex flex-col">
+      <div className="w-[23%] ml-2  gap-2 flex maxsm:hidden flex-col">
         <div className="h-[40%] w-full bg-white rounded-xl pt-2 flex-col flex gap-2">
           <div className="flex h-1/3 items-center justify-center gap-3 pl-3">
             <img
